@@ -1,0 +1,6 @@
+.navBar {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 10px;
+  background-color: paleturquoise;
+}
