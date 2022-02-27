@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import Chip from "@mui/material/Chip";
-
 function Class11() {
   const [class11Subject, setClass11Subject] = useState([]);
   useEffect(() => {

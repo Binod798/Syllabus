@@ -1,17 +1,47 @@
 .navBar {
   display: flex;
+  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
   padding: 10px;
-  background-color: #0055ff;
+  background-color: #1aa3ff;
+  padding-right: 20px;
+}
+.navBar img {
+  width: 80px;
+  height: 80px;
+}
+.navBar__title {
+  color: white;
 }
 .navBar__link {
   display: flex;
+  column-gap: 80px;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
 }
 .navBar__link a {
   text-decoration: none;
+  font-weight: bold;
   font-size: large;
   color: white;
+}
+.navBar__link__search {
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: large;
+}
+.navBar__link__search:focus {
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: large;
+}
+.MuiMenu-list a {
+  text-decoration: none;
 }

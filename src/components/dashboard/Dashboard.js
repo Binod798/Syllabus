@@ -12,9 +12,12 @@ import Chapter from "../chapters/Chapters";
 
 import Grid from "@mui/material/Grid";
 
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+
 import { Routes, Route, Link } from "react-router-dom";
 
 import "./dashboard.css";
+import { hover } from "@testing-library/user-event/dist/hover";
 
 function Dashboard() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -28,7 +31,7 @@ function Dashboard() {
   return (
     <>
       <div className="navBar">
-        <h5>LOGO</h5>
+        <img src="../images/logo.png" alt="logo" />
         <div className="navBar__link">
           <nav>
             <Link to="/see">SEE</Link>
@@ -43,7 +46,12 @@ function Dashboard() {
               onClick={handleClick}
               color="primary"
             >
-              <span style={{ color: "white", fontSize: "200" }}>+2</span>
+              <span
+                style={{ color: "white", fontSize: "20px", fontWeight: "bold" }}
+              >
+                +2
+                <ArrowDropDownIcon />
+              </span>
             </Button>
             <Menu
               id="basic-menu"
@@ -55,16 +63,21 @@ function Dashboard() {
               }}
             >
               <Link to="+2/11">
-                <MenuItem>11</MenuItem>
+                <MenuItem>class 11</MenuItem>
               </Link>
               <Link to="+2/12">
-                <MenuItem>12</MenuItem>
+                <MenuItem>class 12</MenuItem>
               </Link>
             </Menu>
           </div>
+          <input
+            type="text"
+            placeholder="search"
+            className="navBar__link__search"
+          />
         </div>
 
-        <h4>Register</h4>
+        <h4 style={{ color: "white" }}>Register</h4>
       </div>
 
       <Grid container>
