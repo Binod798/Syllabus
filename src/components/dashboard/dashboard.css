@@ -1,6 +1,17 @@
 .navBar {
   display: flex;
-  justify-content: space-evenly;
-  padding: 0 10px;
-  background-color: paleturquoise;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #0055ff;
+}
+.navBar__link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.navBar__link a {
+  text-decoration: none;
+  font-size: large;
+  color: white;
 }

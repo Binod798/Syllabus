@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+import Chip from "@mui/material/Chip";
+
 function Class11() {
   const [class11Subject, setClass11Subject] = useState([]);
   useEffect(() => {
@@ -18,11 +20,15 @@ function Class11() {
     getClass11();
   }, []);
   return (
-    <div>
-      <h4>Class 11 subject</h4>
-      {class11Subject.map((item) => (
-        <Link to={`/+2/11/${item}`}>{item}</Link>
-      ))}
+    <div className="subjectContainer">
+      <h4 className="subjectContainerTitle">Choose subject</h4>
+      <div className="subjectContainerFlex">
+        {class11Subject.map((item) => (
+          <Link to={`/+2/11/${item}`}>
+            <div className="subjectContainerItem">{item}</div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

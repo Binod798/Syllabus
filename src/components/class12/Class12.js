@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Class12() {
   const [class12Subject, setClass12Subject] = useState([]);
@@ -17,11 +18,15 @@ function Class12() {
     getClass12();
   }, []);
   return (
-    <div>
-      <h4>Class 12 subject</h4>
-      {class12Subject.map((item) => (
-        <h4>{item}</h4>
-      ))}
+    <div className="subjectContainer">
+      <h4 className="subjectContainerTitle">Choose subject</h4>
+      <div className="subjectContainerFlex">
+        {class12Subject.map((item) => (
+          <Link to={`/+2/11/${item}`}>
+            <div className="subjectContainerItem">{item}</div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

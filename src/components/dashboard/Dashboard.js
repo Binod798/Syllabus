@@ -8,14 +8,13 @@ import Footer from "../footer/Footer";
 import See from "../see/See";
 import Class11 from "../class11/Class11";
 import Class12 from "../class12/Class12";
-import Chapter from "../Chapters";
+import Chapter from "../chapters/Chapters";
 
 import Grid from "@mui/material/Grid";
 
 import { Routes, Route, Link } from "react-router-dom";
 
 import "./dashboard.css";
-import { height } from "@mui/system";
 
 function Dashboard() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -30,38 +29,41 @@ function Dashboard() {
     <>
       <div className="navBar">
         <h5>LOGO</h5>
-        <nav>
-          <Link to="/see">SEE</Link>
-        </nav>
+        <div className="navBar__link">
+          <nav>
+            <Link to="/see">SEE</Link>
+          </nav>
 
-        <div>
-          <Button
-            id="basic-button"
-            aria-controls={open ? "basic-menu" : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? "true" : undefined}
-            onClick={handleClick}
-            color="primary"
-          >
-            +2
-          </Button>
-          <Menu
-            id="basic-menu"
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-            MenuListProps={{
-              "aria-labelledby": "basic-button",
-            }}
-          >
-            <Link to="+2/11">
-              <MenuItem>11</MenuItem>
-            </Link>
-            <Link to="+2/12">
-              <MenuItem>12</MenuItem>
-            </Link>
-          </Menu>
+          <div>
+            <Button
+              id="basic-button"
+              aria-controls={open ? "basic-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={handleClick}
+              color="primary"
+            >
+              <span style={{ color: "white", fontSize: "200" }}>+2</span>
+            </Button>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                "aria-labelledby": "basic-button",
+              }}
+            >
+              <Link to="+2/11">
+                <MenuItem>11</MenuItem>
+              </Link>
+              <Link to="+2/12">
+                <MenuItem>12</MenuItem>
+              </Link>
+            </Menu>
+          </div>
         </div>
+
         <h4>Register</h4>
       </div>
 

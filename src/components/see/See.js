@@ -17,10 +17,15 @@ function See() {
     getSee();
   }, []);
   return (
-    <div>
-      {seeSubject.map((item) => (
-        <h4>{item}</h4>
-      ))}
+    <div className="subjectContainer">
+      <h4 className="subjectContainerTitle">Choose subject</h4>
+      <div className="subjectContainerFlex">
+        {seeSubject.map((item) => (
+          <div className="subjectContainerItem">
+            <span style={{ fontSize: "25px", color: "#0d6efd" }}>{item}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

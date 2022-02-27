@@ -19,11 +19,15 @@ function Chapter() {
     getClass11Chapter();
   }, []);
   return (
-    <div>
-      <h4>Class 11 subject</h4>
-      {class11Chapter.map((item) => (
-        <Link to={`/+2/11/${param.subject}/${item}`}>{item}</Link>
-      ))}
+    <div className="subjectContainer">
+      <h4 className="subjectContainerTitle">Choose Chapter</h4>
+      <div className="subjectContainerFlex">
+        {class11Chapter.map((item) => (
+          <Link to={`/+2/11/${item}`}>
+            <div className="subjectContainerItem">{item.split(".")[0]}</div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
