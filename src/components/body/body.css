@@ -1,0 +1,25 @@
+.bodyContainer{
+    margin-top: 8rem;
+}
+.studentImg{
+    width: auto;
+    height:320px;
+    object-fit: cover;
+}
+.bodyContainer__GridItem1{
+    width: 50%;
+    margin: auto;
+}
+.service{
+    margin-top: 5rem;
+}
+.serviceContainer__GridItem2{
+    width: 50%;
+    margin: auto;
+}
+.serviceContainer__card{
+    width: 80%;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}

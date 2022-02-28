@@ -10,14 +10,12 @@ import Class11 from "../class11/Class11";
 import Class12 from "../class12/Class12";
 import Chapter from "../chapters/Chapters";
 
-import Grid from "@mui/material/Grid";
 
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 import { Routes, Route, Link } from "react-router-dom";
 
 import "./dashboard.css";
-import { hover } from "@testing-library/user-event/dist/hover";
 
 function Dashboard() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -80,24 +78,14 @@ function Dashboard() {
         <h4 style={{ color: "white" }}>Register</h4>
       </div>
 
-      <Grid container>
-        <Grid item sm={9}>
-          <Routes>
-            <Route path="/" element={<Body />} />
-            <Route path="/see" element={<See />} />
-            <Route path="/+2/11" element={<Class11 />} />
-            <Route path="/+2/12" element={<Class12 />} />
-            <Route path="/+2/11/:subject" element={<Chapter />} />
-          </Routes>
-        </Grid>
-        <Grid item sm={3} sx={{ backgroundColor: "gray", height: "90vh" }}>
-          <h1 className="addContainer">Add Container</h1>
-          <div className="addContainer">2</div>
-          <div className="addContainer">3</div>
-          <div className="addContainer">4</div>
-        </Grid>
-      </Grid>
 
+      <Routes>
+        <Route path="/" element={<Body />} />
+        <Route path="/see" element={<See />} />
+        <Route path="/+2/11" element={<Class11 />} />
+        <Route path="/+2/12" element={<Class12 />} />
+        <Route path="/+2/11/:subject" element={<Chapter />} />
+      </Routes>
       <Footer />
     </>
   );
