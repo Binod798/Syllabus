@@ -29,7 +29,9 @@ function Dashboard() {
   return (
     <>
       <div className="navBar">
-        <img src="../images/logo.png" alt="logo" />
+        <Link to='/'>
+          <img src="../images/logo.png" alt="logo" />
+        </Link>
         <div className="navBar__link">
           <nav>
             <Link to="/see">SEE</Link>
