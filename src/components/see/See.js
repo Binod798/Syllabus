@@ -31,7 +31,7 @@ function See() {
           <div className="subjectContainerFlex">
             {seeSubject.map((item) => (
               <div className="subjectContainerItem">
-                <span style={{ fontSize: "25px", color: "#0d6efd" }}>{item}</span>
+                <span style={{ fontSize: "25px", color: "white" }}>{item}</span>
               </div>
             ))}
           </div>

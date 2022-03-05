@@ -32,13 +32,24 @@ code {
   align-content: center;
 }
 .subjectContainerItem {
-  width: 10wh;
+  width: 200px;
   padding: 20px;
-  height: 100px;
-  background-color: #e6eeff;
+  height: 200px;
+  background:linear-gradient(to right bottom,#6500B0, #6500B0,#87b8ed);
   font-weight: 500;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+font-size: x-large;
+color: white;
 }
 .subjectContainerFlex a {
   text-decoration: none;
   font-size: 20px;
+}
+.subjectContainerItem:hover{
+  transform: scale(1.2,1.2);
+  border-radius: 20px; 
+  font-size: xx-large; 
 }

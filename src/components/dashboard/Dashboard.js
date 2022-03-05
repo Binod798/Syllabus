@@ -9,6 +9,7 @@ import See from "../see/See";
 import Class11 from "../class11/Class11";
 import Class12 from "../class12/Class12";
 import Chapter from "../chapters/Chapters";
+import Pdf from "../pdf/Pdf";
 
 
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -63,10 +64,10 @@ function Dashboard() {
               }}
             >
               <Link to="+2/11">
-                <MenuItem>class 11</MenuItem>
+                <MenuItem onClick={handleClose}>class 11</MenuItem>
               </Link>
               <Link to="+2/12">
-                <MenuItem>class 12</MenuItem>
+                <MenuItem onClick={handleClose}>class 12</MenuItem>
               </Link>
             </Menu>
           </div>
@@ -87,8 +88,9 @@ function Dashboard() {
         <Route path="/+2/11" element={<Class11 />} />
         <Route path="/+2/12" element={<Class12 />} />
         <Route path="/+2/11/:subject" element={<Chapter />} />
+        <Route path='/+2/11/:subject/:chapter' element={<><Chapter/></>}/>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
