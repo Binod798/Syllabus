@@ -11,7 +11,6 @@ import Class12 from "../class12/Class12";
 import Chapter from "../chapters/Chapters";
 import Pdf from "../pdf/Pdf";
 
-
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 import { Routes, Route, Link } from "react-router-dom";
@@ -30,7 +29,7 @@ function Dashboard() {
   return (
     <>
       <div className="navBar">
-        <Link to='/'>
+        <Link to="/">
           <img src="../images/logo.png" alt="logo" />
         </Link>
         <div className="navBar__link">
@@ -81,14 +80,20 @@ function Dashboard() {
         <h4 style={{ color: "white" }}>Register</h4>
       </div>
 
-
       <Routes>
         <Route path="/" element={<Body />} />
         <Route path="/see" element={<See />} />
         <Route path="/+2/11" element={<Class11 />} />
         <Route path="/+2/12" element={<Class12 />} />
         <Route path="/+2/11/:subject" element={<Chapter />} />
-        <Route path='/+2/11/:subject/:chapter' element={<><Chapter/></>}/>
+        <Route
+          path="/+2/11/:subject/:chapter"
+          element={
+            <>
+              <Chapter />
+            </>
+          }
+        />
       </Routes>
       {/* <Footer /> */}
     </>

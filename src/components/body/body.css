@@ -1,25 +1,34 @@
-.bodyContainer{
-    margin-top: 8rem;
+.bodyContainer {
+  margin-top: 8rem;
 }
-.studentImg{
-    width: auto;
-    height:320px;
-    object-fit: cover;
+.studentImg {
+  width: auto;
+  height: 320px;
+  object-fit: cover;
 }
-.bodyContainer__GridItem1{
-    width: 50%;
-    margin: auto;
+.service__container__img {
+  display: flex;
+  justify-content: center;
 }
-.service{
-    margin-top: 5rem;
+.studentImg1 {
+  margin: auto;
+  width: auto;
+  height: 250px;
+  object-fit: cover;
 }
-.serviceContainer__GridItem2{
-    width: 50%;
-    margin: auto;
+.bodyContainer__GridItem1 {
+  width: 50%;
+
+  margin: auto;
 }
-.serviceContainer__card{
-    width: 80%;
-    gap: 20px;
-    display: flex;
-    flex-wrap: wrap;
+.service {
+  margin-top: 5rem;
+}
+
+.serviceContainer__card {
+  padding: 50px 0;
+  margin: auto;
+  width: 78%;
+  display: flex;
+  flex-wrap: wrap;
 }
