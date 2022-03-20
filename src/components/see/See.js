@@ -11,7 +11,7 @@ function See() {
     const getSee = async () => {
       try {
         const response = await axios.get(
-          "https://padandaas.herokuapp.com/api/firebase/list-directory/?level=see&faculty=see"
+          "https://padandaas-v2.herokuapp.com/api/firebase/list-subjects/?level=SEE"
         );
         setIsLoading(false);
         setSeeSubject(response.data);

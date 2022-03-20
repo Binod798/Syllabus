@@ -8,7 +8,7 @@ function Class11() {
     const getClass11 = async () => {
       try {
         const response = await axios.get(
-          "https://padandaas.herokuapp.com/api/firebase/list-directory/?level=11&faculty=science"
+          "https://padandaas-v2.herokuapp.com/api/firebase/list-subjects/?level=11&type=Notes"
         );
         setClass11Subject(response.data);
       } catch (error) {
