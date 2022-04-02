@@ -77,7 +77,7 @@ function Dashboard() {
           />
         </div>
 
-        <h4 style={{ color: "white" }}>Register</h4>
+        <h4 style={{ color: "white" }}>Padandaas News</h4>
       </div>
 
       <Routes>

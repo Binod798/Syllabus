@@ -11,9 +11,7 @@ function Pdf() {
     const getPdf = async () => {
       try {
         const response = await axios.get(
-          `https://padandaas.herokuapp.com/api/firebase/file/?level=11&faculty=science&subject=${
-            param.subject
-          }&chapter=${param.chapter.split("-")[1]}`
+          `https://padandaas-v2.herokuapp.com/api/firebase/file?level=11&type=QC&subject=Accountancy%20(1031)&file=Accountancy`
         );
         setPdf(response.data.pdfUrl);
         console.log(response.data.pdfUrl);
