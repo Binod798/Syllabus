@@ -24,7 +24,18 @@ export const class11_Computer_Chapters = [
   "2. Number System & Conversion Boolen",
   "3.Computer Software & Operating",
   "4.Application pacakage",
-  "5.Programming Comcepts & Logics",
+  "5.Programing Comcepts & Logics",
+  "6. WEB Technology-I",
+  "7. Multimedia",
+  "8. Information Security and Cyber Law",
+];
+
+export const class12_Computer_Chapters = [
+  "1. Database Management System",
+  "2. Networking",
+  "3.Computer Software & Operating",
+  "4.Application pacakage",
+  "5.Programing Comcepts & Logics",
   "6. WEB Technology-I",
   "7. Multimedia",
   "8. Information Security and Cyber Law",

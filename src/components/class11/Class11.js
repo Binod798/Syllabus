@@ -10,7 +10,7 @@ function Class11() {
     "Accounting",
     "Biology",
     "Business Studies",
-    "Computer Science",
+    "Computer Science (4271)",
     "Chemistry",
     "Economics",
     "Mathematics",

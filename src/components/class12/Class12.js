@@ -10,7 +10,7 @@ function Class12() {
     "Accounting",
     "Biology",
     "Business Studies",
-    "Computer Science",
+    "Computer Science (4281)",
     "Chemistry",
     "Economics",
     "Mathematics",
@@ -24,7 +24,7 @@ function Class12() {
       <h4 className="subjectContainerTitle">Choose Class 12 Subjects</h4>
       <div className="subjectContainerFlex">
         {class12Subject.map((item) => (
-          <Link to={`/+2/11/${item}`}>
+          <Link to={`/+2/12/${item}`}>
             <div className="subjectContainerItem">{item}</div>
           </Link>
         ))}

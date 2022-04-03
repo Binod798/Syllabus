@@ -86,6 +86,7 @@ function Dashboard() {
         <Route path="/+2/11" element={<Class11 />} />
         <Route path="/+2/12" element={<Class12 />} />
         <Route path="/+2/11/:subject" element={<Chapter />} />
+        <Route path="/+2/12/:subject" element={<Chapter />} />
         {/* <Route
           path="/+2/11/:subject/:chapter"
           element={

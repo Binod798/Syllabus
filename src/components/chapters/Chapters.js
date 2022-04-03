@@ -30,10 +30,12 @@ import { Routes, Route } from "react-router-dom";
 // Import chapters
 import { class11_Nepali_Chapters } from "./chaptersFunction";
 import { class11_Computer_Chapters } from "./chaptersFunction";
+import { class12_Computer_Chapters } from "./chaptersFunction";
 
 // Tabs
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import { SignalCellularNullSharp } from "@mui/icons-material";
 
 // For Drawer
 // const drawerWidth = 240;
@@ -232,12 +234,25 @@ export default function Chapters() {
     setTabValue(newValue);
   };
 
-  const chapters_needed =
+  const chapters11_needed =
     param.subject === "Nepali"
       ? class11_Nepali_Chapters
-      : param.subject === "Computer Science"
+      : param.subject === "Computer Science (4271)"
       ? class11_Computer_Chapters
+      : SignalCellularNullSharp;
+
+  const chapters12_needed = [
+    param.subject === "Computer Science (4281)"
+      ? class12_Computer_Chapters
+      : null,
+  ];
+  const chapters_needed =
+    chapters11_needed.length > 0
+      ? chapters11_needed
+      : chapters12_needed.length > 0
+      ? chapters12_needed
       : ["None"];
+
   return (
     <Box sx={{ display: "flex" }}>
       <Drawer
@@ -254,7 +269,7 @@ export default function Chapters() {
       >
         <Toolbar />
         <Divider />
-        <List sx={{ height: "100vh", overflowY: "scroll", pb: 4 }}>
+        <List sx={{ height: "100vh", overflowY: "scroll", pb: 4}}>
           {chapters_needed.map((text, index) => (
             <ListItem button key={text}>
               <ListItemText primary={text} />
@@ -282,7 +297,7 @@ export default function Chapters() {
             <Tab label="Question Collection" />
           </Tabs>
         </Box>
-        <Pdf/>
+        <Pdf />
         <Typography paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
